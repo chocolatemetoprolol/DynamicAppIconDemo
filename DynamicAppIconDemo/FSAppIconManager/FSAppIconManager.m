@@ -31,7 +31,7 @@
 
 + (void)changeAppIconWithIconName:(NSString *)iconName completionHandler:(void (^)(NSError * _Nullable))completionHandler {
     if (@available(iOS 10.3, *)) {
-        [[UIApplication sharedApplication] setAlternateIconName:@"male" completionHandler:^(NSError * _Nullable error) {
+        [[UIApplication sharedApplication] setAlternateIconName:iconName completionHandler:^(NSError * _Nullable error) {
             if (!error) {
                 completionHandler(nil);
             } else {
